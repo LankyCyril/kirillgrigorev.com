@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title></title>
+    <style>
+        * {font-family: sans; line-height: 1.5; background: #222; color: #FFF}
+    </style>
+    </head>
+    <body>
+<b>1.</b>  Talk to you about bringing space radiation data into the world of open science
+<br><br>
+<b>2.</b>  The NASA OSDR maintains a number of databases for omics data, phenotype datasets, and biospecimens.
+<br><br>
+<b>3.</b>  Implementing all the infrastructure around it required to make datasets FAIR.
+<br><br>
+<b>4.</b>  As a specific example, GeneLab and ALSDA data can be interrogated on a higher level of space science datasets
+<br><br>
+<b>5.</b>  Providing access to curated analysis and raw files for each of the hundreds of these studies
+<br><br>
+<b>6.</b>  And on the more fine-grained level, allowing users to interrogate across individual samples and their metadata
+<br><br>
+<b>7.</b>  As well as experiment and analysis data themselves, here exemplified by transcriptomics tables
+<br><br>
+<b>8.</b>  pulled via GLOpenAPI, which, incidentally, is one of the projects that yours truly is deeply involved in developing and maintaining.
+<br>-  The metadata and data, retrievable programmatically from OSDR, enable complex downstream analyses, both small and at scale across
+      multiple datasets.
+<br><br>
+<b>9.</b>  And so, a similar goal was established to curate and provide centralized access to radiation readings from the multitude of
+    detectors on the ISS and beyond -- the RadLab database.
+<br>-  Which is, indeed, <i>the other project</i> that I'm working on, and which is in fact the central topic of this presentation.
+<br>-  We already have readings from many detectors in various modules of the ISS, as well as on spacecraft in BLEO.
+<br><br>
+<b>10</b>. RadLab comprises both the programmatic interface, that is, the API, and the graphical user interface.
+<br>-  I'll spend a little time going over the GUI first, because we didn't implement all these bells and whistles for nothing, after all
+<br>-  The GUI allows you to intuitively navigate the data and zero in on subsets of interest.
+<br>-  In the case of the ISS, you can even point and click on modules, but the core functionality is the instrument tree and the
+      strip plot on the top, of course.
+<br>-  You can select timespans of interest, locations, instrument types,
+<br><br>
+<b>11</b>. And then immediately visualize the data.
+<br>-  And any time you issue an updated request, you can export the resulting data right away.
+<br>-  Currently we mostly host absorbed radiation dose rate and flux readings (that's the measurement dropdown at the top),
+      but we are working on incorporating others -- LET spectra, dose equivalent.
+<br><br>
+<b>12</b>. I've spent quite some time to make sure that the UI is as smooth and intuitive as possible,
+<br>-  currently working on stacked plots and further interactivity,
+<br><br>
+<b>13</b>. But these visualizations, of course, illustrate what kinds of data we provide -- like, for example, a geospatial plot like this
+    strongly implies that we also associate all data points with spatial coordinates, doesn't it.
+<br><br>
+<b>14</b>. And in a way, the main point is that these data are readily available via the RadLab API
+<br>- - just like biological data that I brought up a couple of minutes ago.
+<br><br>
+<b>15</b>. The API is documented on the RadLab website,
+<br><br>
+<b>16</b>. and we took extra care to make sure that the outputs are immediately ingestable by your next great bespoke analysis pipeline,
+<br><br>
+<b>17</b>. be it in Python, R, or honestly pretty much any language.
+<br><br>
+<b>18</b>. One of the specific applications of the RadLab database and the API is providing radiation data back to the GeneLab and ALSDA
+    component of OSDR
+<br>-  for example, within the constraints of a specific mission and payload
+<br><br>
+<b>19</b>. And the EDA, also part of OSDR, which hosts environmental data for these missions, stands to benefit from this integration.
+    The work of bringing the RadLab database to completeness, or near completeness, is ongoing in order to make this a reality.
+<br><br>
+<b>20</b>. Another example of RadLab's applications is AI/ML; for instance, RadLab provided BLEO data for this summer's FDL-X challenge,
+<br><br>
+<b>21</b>. Aimed at training an early warning model for predicting spikes in radiation.
+<br>-  I actually personally received comments from researchers working on this -- how crucial it was that the data from various
+      detectors were accessible from one place and in a uniform way, as opposed to scouting for data that might be fragmented, siloed,
+      in arbitrary and largely incompatible formats, and hoping for the best.
+<br><br>
+<b>22</b>. Alongside the data, RadLab also contains a knowledgebase that is meant to provide relevant information
+<br><br>
+<b>23</b>. on each detector, and eventually each term, stored in the database.
+<br><br>
+<b>24</b>. RadLab is still a relatively young project, and for most of its existence the focus has been on developing and polishing the
+    infrastructure;
+<br>-  but at this point in time, we are shifting the focus onto expanding the underlying database itself and bringing it to a state like
+      this -- of completeness (or near completeness)
+<br>-  and integration with other resources and data types
+<br><br>
+<b>25</b>. And so to this point, the RadLab Working Group, similar to other Analysis Working Groups, is set up to help in this process.
+<br>-  More datasets need to be integrated;
+<br>-  To the point of functionality, yes one could say that it is nominally complete, but we are working, for example, on enshrining an
+      agreed-upon standard for data harmonization, which will inform how data from disparate detectors are made comparable to each other
+      and provide a unified answer, for instance, to the question of "how much radiation did this payload actually receive", and so on.
+<br>-  And generally speaking, establishing the use of RadLab in research.
+<br>-  If you are interested in joining the effort, please scan this QR code.
+<br><br>
+This is an exciting time for me, for us, RadLab is set to continue evolving, and we would love to have you all on board!
+<br><br>
+I would like to thank everyone who's helped to make this a reality,<br>
+And thank you for your attention<br>
+And find me at one of the coffee breaks and I'll happily talk your ear off about this.
+    </body>
+</html>
